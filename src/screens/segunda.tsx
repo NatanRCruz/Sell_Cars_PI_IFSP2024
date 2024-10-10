@@ -1,5 +1,6 @@
 import React from 'react';
 import './segunda.css'; // Importe o CSS correspondente
+import { Link } from 'react-router-dom';
 
 const InformacoesCarro: React.FC = () => {
   return (
@@ -10,9 +11,6 @@ const InformacoesCarro: React.FC = () => {
         <div className="input-group">
           <input type="text" placeholder="Marca" className="input" />
           <input type="text" placeholder="Modelo" className="input" />
-        </div>
-        <div className="input-group">
-          <input type="text" placeholder="Informações do carro" className="input" />
         </div>
         <div className="input-group">
           <input type="text" placeholder="Valor" className="input" style={{ color: 'red' }} />
@@ -33,7 +31,9 @@ const InformacoesCarro: React.FC = () => {
         <div className="input-group">
           <textarea placeholder="Descrição do Veículo" className="input textarea" />
         </div>
+        <Link to="/terceiraEtapa">
         <button className="botao-etapa-final">Etapa Final</button>
+      </Link>
       </form>
     </div>
   );
